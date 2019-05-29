@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Card, List } from 'antd';
+import { Link } from 'react-router-dom'
 
 export default class CryptoList extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
          <Card>
             <List>
-                <li>{ cList }</li>
+                <li key='i'>{ cList }</li>
             </List>
         </Card>
-      </div>
+      </React.Fragment>
     )
   }
 };
@@ -20,5 +21,5 @@ const cryptoList = ["Bitcoin", "Ethereum", "Ripple", "Bitcoin Cash", "Litecoin"]
 
 
     let cList = cryptoList.map((val, i, cryptoList) => {
-    return <li> <a href={`/currency/`} >{val}</a></li>
+    return <li> <Link to={`/currency/`} >{val}</Link></li>
 });

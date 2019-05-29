@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Navigation extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <div className="banner">
                     <h3>CryptoTracker</h3>
-                    <a href={`/`} className="navLink">Home</a>
+                    <Link to={`/`} className="navLink">Home</Link>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
