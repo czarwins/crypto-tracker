@@ -4,7 +4,9 @@ import Home from './components/Home';
 import Navigation from './components/Navigation';
 import SingleCurrency from './components/SingleCurrency';
 import { BrowserRouter as Router, Route, } from 'react-router-dom';
+import Notes from './components/Notes'
 
+import AddNote from './components/AddNote';
 const routes = [
   {
     path: "/",
@@ -20,6 +22,28 @@ const routes = [
 ];
 
 class App extends Component {
+  state = {
+    notes: [
+      { id: 1, text: "NOTES:" },
+
+    ]
+  }
+  deleteNote = (id) => {
+    const notes = this.state.notes.filter(note => {
+      return note.id !== id
+    });
+    this.setState({
+      notes: notes
+    });
+  }
+
+  addNote = (note) => {
+    note.id = Math.random();
+    let notes = [...this.state.notes, note];
+    this.setState({
+      notes: notes
+    });
+  }
   render() {
     return (
       <React.Fragment >
@@ -38,7 +62,10 @@ class App extends Component {
               ))
             }
           </div>
+
         </Router>
+        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
+        <AddNote addNote={this.addNote} />
       </React.Fragment>
     )
   }

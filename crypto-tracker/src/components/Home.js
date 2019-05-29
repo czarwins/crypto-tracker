@@ -16,15 +16,14 @@ export default class Home extends Component {
         })
             .then((response) => {
                 this.setState({
-                    currencies: response.data.currencies                                
+                    currencies: response.data.currencies
                 })
-                console.log(response.data.currencies);
             })
             .catch((err) => {
-                console.log(err);
                 this.setState({
                     currencies: []
                 });
+                console.log(err);
             });
     };
 

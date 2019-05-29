@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import { Container, Button } from 'reactstrap';
-import {  Card } from 'antd';
+import { Card } from 'antd';
 
 import axios from 'axios';
 
@@ -29,16 +28,16 @@ export default class SingleCurrency extends Component {
   }
 
   render() {
-    
-    
+
+
 
     return (
       <React.Fragment>
         <Card style={{ width: 300 }}>
-          <h2 className='cryptoListHeading'>{ this.state.data.name }</h2>
-          <h2>Symbol: { this.state.data.symbol }</h2>
+          <h2 className='cryptoListHeading'>{this.state.data.name}</h2>
+          <h2>Symbol: {this.state.data.symbol}</h2>
         </Card>
-        
+
       </React.Fragment>
     )
   }

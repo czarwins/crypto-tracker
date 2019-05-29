@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(express.static(__dirname + '/client/build/'))
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/client/build/index.html')
+    res.sendFile(__dirname + '/client/build/index.html')
 })
 
 app.get('/v1/all', (req, res) => {
@@ -42,20 +42,20 @@ app.get('/v1/all', (req, res) => {
 
     rp(requestOptions).then(response => {
         res.send({
-            currencies: response.data.slice(0,24)
+            currencies: response.data.slice(0, 24)
 
         });
     }).catch((err) => {
         res.send(err);
-    });    
+    });
 
 });
 
 app.get('/v1/crypto', (req, res) => {
-    
+
     const requestOptions = configureRequest({
         uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/map',
-        qs: { symbol: req.query.symbol, price:req.query.quote.USD.price },
+        qs: { symbol: req.query.symbol },
     });
 
     rp(requestOptions).then(response => {
@@ -64,13 +64,13 @@ app.get('/v1/crypto', (req, res) => {
         });
     }).catch((err) => {
         res.send(err);
-    });    
+    });
 
 });
 
 
 
-app.listen(process.env.PORT || 3001, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
- });
+app.listen(process.env.PORT || 3001, function () {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
