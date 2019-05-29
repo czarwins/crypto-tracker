@@ -7,7 +7,7 @@ An app used to track the top 25 cryptocurrencies on the market. Users can click 
 <img src="./crypto-tracker/public/images/cryptolist.png" alt="list screen shot " />
 <br/>
 <img src="./crypto-tracker/public/images/notes.png" alt="notes screen shot"/>
-<br/>
+
 
 ## Technologies Used:
 <ul>
