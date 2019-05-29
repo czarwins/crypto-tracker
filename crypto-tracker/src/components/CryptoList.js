@@ -4,22 +4,33 @@ import { Link } from 'react-router-dom'
 
 export default class CryptoList extends Component {
   render() {
-    return (
-      <React.Fragment>
-         <Card>
+    return this.props.currencies.map(({ name,symbol, quote }) => {
+      let price = quote.USD.price;
+      // console.log(quote.USD.price);
+      return (
+        
+        <React.Fragment>
+          <Link to={`/currency/${symbol}`}>
+          <Card>
             <List>
-                <li key='i'>{ cList }</li>
+              <li key='i'>{ name } <br/> {symbol} USD: ${ price }</li>
+
             </List>
-        </Card>
-      </React.Fragment>
-    )
+          </Card>
+          </Link>
+          
+          
+        </React.Fragment>
+      )
+    })
+
   }
 };
 
-const cryptoList = ["Bitcoin", "Ethereum", "Ripple", "Bitcoin Cash", "Litecoin"];
+// const cryptoList = ["Bitcoin", "Ethereum", "Ripple", "Bitcoin Cash", "Litecoin"];
 
 
 
-    let cList = cryptoList.map((val, i, cryptoList) => {
-    return <li> <Link to={`/currency/`} >{val}</Link></li>
-});
+//     let cList = cryptoList.map((val, i, cryptoList) => {
+//     return <li> <Link to={`/currency/`} >{val}</Link></li>
+// });

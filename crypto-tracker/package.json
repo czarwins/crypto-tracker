@@ -2,6 +2,7 @@
   "name": "crypto-tracker",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "antd": "^3.19.1",
     "axios": "^0.18.0",

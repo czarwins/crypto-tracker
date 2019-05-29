@@ -12,7 +12,7 @@ const routes = [
     main: Home
   },
   {
-    path: "/currency/",
+    path: "/currency/:symbol",
     exact: true,
     main: SingleCurrency
   }
