@@ -17,5 +17,16 @@
   color: white;
 }
 
+.cryptoListHeading {
+  margin: 20px;
+}
+
+.banner {
+background: rebeccapurple;
+padding: 12px;
+}
+.navLink {
+  padding: 3px;
+}
 
 
