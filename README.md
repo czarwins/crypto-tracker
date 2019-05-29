@@ -2,11 +2,11 @@
 
 An app used to track the top 25 cryptocurrencies on the market. Users can click on a currency of their choice and write notes on the live prices. Click on a note once to delete it.
 
-<img src="./public/images/home.png" alt="screen shot"/>
+<img src="./crypto-tracker/public/images/home.png" alt="home screen shot"/>
 <br/>
-<img src="/Users/czarwynndubois/dev/crypto-tracker/crypto-tracker/crypto-tracker/public/images/cryptolist.png" alt="screen shot " />
+<img src="./public/images/cryptolist.png" alt="list screen shot " />
 <br/>
-<img src="./public/images/notes.png" alt="screen shot"/>
+<img src="/crypto-tracker/public/images/notes.png" alt="notes screen shot"/>
 <br/>
 
 ## Technologies Used:
